@@ -26,6 +26,8 @@ motor1B.value(0)
 motor2C.value(1)
 motor2D.value(0)
 sleep(3)
+
+
 # Stop the motor after the delay
 motor1A.value(0)
 motor1B.value(1)
