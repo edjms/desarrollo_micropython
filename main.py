@@ -39,14 +39,14 @@ echo = Pin(13, Pin.IN)
 def get_distance():
     # Generar pulso de disparo
     trigger.off()
-    sleep.sleep_us(2)
+    time.sleep_us(2)
     trigger.on()
-    sleep.sleep_us(5)
+    time.sleep_us(5)
     trigger.off()
     while echo.value() == 0:
-        pulse_start = sleep.ticks_us()
+        pulse_start = time.ticks_us()
     while echo.value() == 1:
-        pulse_end = sleep.ticks_us()
+        pulse_end = time.ticks_us()
 
     duration = pulse_end - pulse_start
     distance = (duration * 0.034) / 2
